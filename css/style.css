@@ -1,0 +1,1016 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+ :root{
+  --main-font: 'Source Sans Pro', sans-serif;
+  --navi-font:"游明朝",YuMincho, sans-serif;
+  --first-color: repeating-linear-gradient(0deg, rgb(141, 66, 20) 0%, rgb(168, 78, 22) 5%, rgb(196, 86, 18) 50%,  rgb(170, 75, 16) 95%,rgb(126, 65, 18) 100%);
+  --secondary-color: rgb( 139, 60, 50);
+  --third-color: rgba( 139, 60, 50, 0.1);
+}
+
+ body { 
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #111111;
+}
+
+h1{
+  font-family: var(--navi-font);
+}
+
+h2{
+  display: inline-block;
+  width: 100%;
+  background: var(--first-color);
+  color: #ffffff;
+  padding: 10px 0;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 0;
+}
+
+h3{
+  border-bottom: 2px solid var(--secondary-color);
+  display: inline-block;
+} 
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* --------------------------------
+ * header
+ * -------------------------------- */
+ header {
+  width: 100%;
+}
+
+#header{
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px){
+  #header{
+    text-align: center;
+  }
+
+  #header h1{
+    font-size: 28px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+
+  .header__book{
+    margin: 0 auto;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .header__book ul{
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .header__book li{
+    width: 50%;
+    background: var(--secondary-color);
+    border: 1px solid #ffffff;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .header__book a{
+    display: flex;
+    padding: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    vertical-align: middle;
+  }
+
+  .header__book__icon{
+    width: 15%;
+    margin: 0 5px 0 10px;
+  }
+
+  .header__book__text{
+    width: 85%;
+    font-size: 14px;
+    margin-top: 7px;
+    margin-bottom: 0;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .header__book__text p{
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  .menu-toggler{
+    height: 28px;
+    width: 28px;
+    position: fixed;
+    top: 35px;
+    right: 20px;
+    z-index: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-toggler > span,
+  .menu-toggler > span::before,
+  .menu-toggler > span::after{
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 4px;
+    background: #ea2027;
+    transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  }
+  
+  .menu-toggler > span::before{
+    top: -12px;
+    left: 0;
+  }
+  
+  .menu-toggler > span::after{
+    top: 12px;
+    left: 0;
+  }
+  
+  .menu-toggler.active > span{
+    background: transparent;
+  }
+  
+  .menu-toggler.active > span::before,
+  .menu-toggler.active > span::after{
+    background: #fff;
+    top: 0;
+  }
+  
+  .menu-toggler.active > span::before{
+    transform: rotate(-225deg);
+  }
+  
+  .menu-toggler.active > span::after{
+    transform: rotate(225deg);
+  }
+
+  #menu ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  #menu span{
+    display: block;
+    padding: 0 20px;
+  }
+
+  #menu span{
+    font-size: 18px;
+  } 
+  
+  #menu{
+    position: fixed;
+    top: -700px;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    opacity: 0.9;
+    padding-top: 50px;
+    background:#111;
+    font-size: 16px;
+    box-sizing: border-box;
+    z-index: 200;
+  }
+  
+  #menu ul{
+    display:block;
+    padding: 0;
+    text-align: center;
+  }
+  
+  #menu ul li{
+    display:block;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  #menu ul li:nth-child(1){
+    padding-top: 0;
+  }
+
+  #menu ul li a{
+    text-decoration: none;
+    color: #ddd
+  }
+
+  #menu span{
+    display: block;
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+/* --------------------------------
+ * top
+ * -------------------------------- */
+#top{
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 100vw;
+  height: 450px;
+  background-image: url(../img/top.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  position: relative;
+}
+
+#top img{
+  height: 100%;
+}
+
+.top-text{
+  text-align: center;
+}
+
+.top-text::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 10;
+  position: absolute;
+}
+
+.top-text span{
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--main-font);
+  text-shadow: 0 0 5px #111111;
+  text-align: left;
+  color: #ffffff;
+  z-index: 100;
+}
+
+/* --------------------------------
+ * informatin
+ * -------------------------------- */
+ #informatin{
+  text-align: center;
+  height: 500px;
+}
+
+.informatin__contents{
+  width: 90%;
+  margin: 0 auto;
+  overflow: scroll;
+  height: 280px;
+  text-align: left;
+  margin-top: 20px;
+  border-top: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.informatin__contents ul{
+  height: 100%;
+}
+
+.informatin__contents li{
+  padding: 10px 5px;
+  border-bottom: 1px solid #000000;
+}
+
+.informatin__contents li:first-child{
+  border-top: 1px solid #000000;
+}
+
+.informatin__contents span{
+  display: inline-block;
+  margin-left: 20px;
+  padding: 3px 10px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: rgb(11, 138, 68);
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track{
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 0 2px #777; 
+}
+
+::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+/* --------------------------------
+ * schedule
+ * -------------------------------- */x
+#schedule{
+  text-align: center;
+  margin-top: 20px;
+  background: #f6f4ec;
+}
+
+.schedule__container{
+  text-align: center;
+  margin: 0 20px 50px 20px;
+}
+
+#schedule table{
+  margin: 0 auto;
+  width: 100%;
+}
+
+.schedule__time tr{
+  font-size: 14px;
+  height: 30px;
+}
+.schedule__time tr:first-child{
+  background: rgb(227, 233, 255);
+}
+
+.schedule__time th{
+  color: rgb(34, 0, 204);
+}
+
+.schedule__time td{
+  line-height: 1rem;
+}
+
+.schedule__time p{
+  margin-top: 0;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+table th,
+table td{
+  border: solid 1px black;
+  padding: 5px;
+}
+
+/* --------------------------------
+* access
+* -------------------------------- */
+#access{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.access__inner{
+  padding: 0 20px;
+}
+
+.access__gmap{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* --------------------------------
+* greeting
+* -------------------------------- */
+#greeting{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.greeting__container{
+  margin-bottom: 50px;
+}
+
+#greeting p{
+  text-align: left;
+  margin: 0 50px 20px 50px;
+}
+
+.greeting__image{
+  text-align: center;
+}
+
+.greeting__image img{
+  width: 60%;
+}
+
+/* --------------------------------
+ * explanation
+ * -------------------------------- */
+#explanation{
+  text-align: center;
+}
+
+.gallery-image img{
+  width: 100%;
+}
+
+.explanation__contents{
+  text-align: center;
+  margin: 0 20px;
+}
+
+.explanation__contents li {
+  margin: 0 auto 4px auto;
+  font-size: 20px;
+  padding: 8px 15px;
+  background: var(--third-color);
+  border-radius: 2px;
+  border-left: solid 5px var(--secondary-color);
+  max-width: 800px;
+}
+
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  margin: 0 20px;
+}
+
+ /* --------------------------------
+ * follow
+ * -------------------------------- */
+ #follow{
+  position: absolute;
+}
+
+ #follow ul{
+  margin: 0 auto;
+}
+
+#follow a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  padding: 10px 0;
+  color: #ffffff;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.follow__book__icon{
+  width: 15%;
+  margin: 10px 5px 5px 10px;
+  position: absolute;
+}
+
+.follow__book__text{
+  width: 85%;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.follow__back__btn{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  text-align: center;
+  display: inline-block;
+  float: right;
+  margin-right: 20px;
+}
+
+.back-to-top{
+  width: 40px;
+  height: 40px;
+  background: var(--secondary-color);
+  float: right;
+}
+
+.back-to-top a{
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.back-to-top a::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f106';
+  font-weight: 900;
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 5px;
+  left: 0px;
+  margin: auto;
+}
+
+/* --------------------------------
+ * footer
+ * -------------------------------- */
+footer{
+  text-align: center;
+  height: 80px;
+  line-height: 2rem;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+footer p{
+  padding: 10px 0; 
+  line-height: 4;
+  font-weight: 600;
+}
+
+ /* --------------------------------
+ * メディアクエリ
+ * -------------------------------- */
+
+/* ==== PC版==== */
+@media (min-width: 768px){
+
+  h2{
+    font-size: 24px;
+  }
+
+  h3{
+    font-size: 24px;
+  } 
+
+   /* --------------------------------
+  * header
+  * -------------------------------- */
+  #header{
+    width: 100%;
+    position: relative;
+  }
+
+  #header::after{
+    background: #000;
+    opacity: 0.5;
+    z-index: 500;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  #header h1{
+    font-size: 28px;
+    position: absolute;
+    z-index: 10;
+    margin: 0;
+    padding: 10px 15px;
+    margin-top: 7px;
+    color: #fff;
+    z-index: 100;
+  }
+
+  .header__book{
+    display: none;
+    margin: 0 auto;
+  }
+  
+  .header__book ul{
+    display: flex;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .header__book ul li{
+    width: 250px;
+    max-width: 250px;
+    background-color: var(--secondary-color);
+    border: 1px solid #ffffff;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .header__book a{
+    display: flex;
+    padding: 10px;
+    font-weight: 600;
+    vertical-align: middle;
+  }
+
+  .header__book__icon{
+    width: 15%;
+    margin: 0 5px 0 10px;
+  }
+
+  .header__book__text{
+    width: 85%;
+    font-size: 14px;
+    margin-top: 7px;
+    display: inline-block;
+    font-size: 16px;
+    color: #ffffff;
+  }
+
+  #navi{
+    width: 100%;
+  }
+  
+  #menu{
+    position: absolute;
+    right: 0;
+    width: 70%;
+    z-index: 100;
+  }
+  
+  #menu ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto 15px auto;
+  }
+
+  #menu li{
+    display:inline-block;
+    padding: 15px 15px;
+    margin-top: 10px;
+    width: calc(100% / 5);
+    text-align: center;
+    font-family: var(--navi-font);
+    background: transparent;
+  }
+
+  #menu a{
+    width: 100%;  
+    height: 100%;
+  }
+
+  #menu li:hover{
+    border-bottom: 2px solid var(--secondary-color);
+    background: rgba(255, 252, 252, 0.5);
+  }
+  
+  #menu li:last-child{
+    border-right: 1px solid var(--third-color);
+  }
+  
+  #menu span{
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    z-index: 100;
+  } 
+
+  #menu span:hover{
+    color: #000;
+  }
+
+   /* --------------------------------
+  * top
+  * -------------------------------- */
+  #top{
+    margin-bottom: 20px;
+    margin-top: 0;
+    height: 700px;
+    background-size: cover;
+  }
+
+  .top-text{
+    margin: 0 auto;
+  }
+
+  .top-text span{
+    top: 38%;
+    left: 10%;
+    font-size: 42px;;
+    text-align: left;
+  }
+
+  /* --------------------------------
+  * informatin
+  * -------------------------------- */  
+  #informatin{
+    margin: 0 40px;
+    text-align: center;
+    height: initial;
+  }
+
+  .informatin__inner{
+    margin: 0 0 100px 0;
+  }
+  
+  .informatin__contents{
+    overflow: scroll;
+    width: 80%; 
+    height: 280px; 
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .informatin__contents ul{
+    height: 100%; 
+    margin: 0 auto;
+  }
+  
+  .informatin__contents ul li{
+    padding: 10px 20px;
+  }
+
+  /* --------------------------------
+  * schedule
+  * -------------------------------- */
+  #schedule{
+    margin: 0 40px 50px 40px;
+  }
+
+  .schedule__container{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #schedule table{
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  table th, table td{
+    border: solid 1px black;
+    padding: 15px 15px;
+    font-size: 20px;
+  }
+
+  .schedule__time tr{
+    font-size: 18px;
+    height: 50px;
+  }
+
+  .schedule__time p{
+    font-size: 20px;
+  }
+
+  .schedule__callender{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* --------------------------------
+  * access
+  * -------------------------------- */
+  #access{
+    margin: 0 40px 100px 40px;
+    text-align: center;
+  }
+
+  .access__inner{
+    padding: 0;
+  }
+
+  .access__adress span{
+    font-size: 20px;
+  }
+
+ /* --------------------------------
+ * greeting
+ * -------------------------------- */
+  #greeting{
+    margin: 0 40px 100px 40px;
+  }
+
+  .greeting__container{
+    max-width: 800px;
+    margin: 20px auto 50px auto;
+    padding-left: 20px;
+  }
+
+  .greeting__container__text{
+    width: 50%;
+    float: right;
+  }
+
+  .greeting__container__text p{
+    font-size: 16px;
+    margin: 0 !important;
+  }
+
+  .greeting__image{
+    width: 50%;
+    float: left;
+  }
+
+  .greeting__image img{
+    width: 250px;
+  }
+
+  /* --------------------------------
+  * explanation
+  * -------------------------------- */  
+  #explanation{
+    margin: 0 40px 50px 40px;
+  }
+
+  .explanation__contents{
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  /* --------------------------------
+  * follow
+  * -------------------------------- */
+  #follow{
+    display: block;
+    position: fixed;
+    top: 40%;
+    right: 10px;
+    z-index: 100;
+  }
+
+  #follow .greeting__container{
+    margin: 50px 0;
+  }
+
+  #follow ul{
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-right: 0;
+  }
+
+  .follow__book{
+    background-color: var(--secondary-color);
+    border: 1px solid #ffffff;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+  }
+
+  #follow a{
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    font-weight: 600;
+  }
+
+  .follow__book__icon{
+    width: auto;
+    margin: 10px 0 0 27px;
+  }
+
+  .follow__book__text{
+    font-size: 12px;
+    line-height: 0rem;
+    width: 100%;
+  }
+
+  .back-to-top{
+    width: 50px;
+    height: 50px;
+  }
+
+  .follow__back__btn {
+    margin-right: 30px;
+  }
+
+  .back-to-top a::before{
+    top: 2px;
+    left: 5px;
+  }
+}
+
+/* ==== PC版 (大) ==== */
+@media (min-width: 1025px){
+  /* --------------------------------
+  * header
+  * -------------------------------- */
+  #header h1{
+    font-size: 40px;
+    width: 50;
+    margin-left: 40px;
+    padding-top: 20px;
+  }
+
+  #menu li{
+    padding-top: 20px;
+  }
+
+  #menu span{
+    color: #fff;
+    display: block;
+    font-size: 28px;
+    padding-top: 10px;
+  }
+
+  /* --------------------------------
+  * top
+  * -------------------------------- */
+  .top-text span{
+    font-size: 56px;
+  }
+
+  /* --------------------------------
+  * schedule
+  * -------------------------------- */
+  #schedule{
+    margin: 50px 100px 100px 100px;
+  }
+
+  .schedule__container{
+    display: flex;
+    justify-content: center;
+  }
+
+  .schedule__time,
+  .schedule__callender{
+    width: 50%;
+  }
+
+  .schedule__time{
+    padding-right: 30px;
+  }
+
+  .schedule__time table th,
+  .schedule__time table td{
+    border: solid 1px black;
+    padding: 10px;
+    font-size: 20px;
+    height: 40px;
+  }
+
+   /* --------------------------------
+  * informatin
+  * -------------------------------- */
+  #informatin{
+    margin: 50px 100px 100px 100px;
+  }
+  
+   /* --------------------------------
+  * greeting
+  * -------------------------------- */
+  #greeting{
+    margin: 50px 100px 100px 100px;
+  }
+
+  .greeting__container{
+    max-width: 1000px;
+  }
+
+  .greeting__container__text p{
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  .greeting__image{
+    width: 50%;
+  }
+
+  .greeting__image img{
+    width: 350px;
+  }
+
+   /* --------------------------------
+  * explanation
+  * -------------------------------- */
+  #explanation{
+    margin: 50px 100px 100px 100px;
+  }
+  
+   /* --------------------------------
+  * access
+  * -------------------------------- */
+  #access{
+    margin: 50px 100px 100px 100px;
+  }
+  .access__adress{
+    display: inline-block;
+  }
+}
+  /* ==== PC版 (大) ここまで==== */

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>クリニック仮想サイト</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="header">
+      <h1>XXXクリニック</h1>
+      <div class="header__book">
+        <div class="header__book__text">
+            <p>ご予約はこちらから</p>
+        </div>
+        <div class="header__book__btn">
+            <ul>
+              <li class="header__book__list">
+                <a href="#">
+                  <div class="header__book__icon">
+                    <i class="fas fa-phone-volume fa-2x"></i>
+                  </div>
+                  <span class="header__book__text">お電話</span>
+                </a>
+              </li>
+              <li class="header__book__list">
+                <a href="#">
+                  <div class="header__book__icon">
+                    <i class="fas fa-mobile-alt fa-2x"></i>
+                  </div>
+                  <span class="header__book__text">WEB予約</span>
+                </a>
+              </li>
+            </ul>
+        </div>
+      </div> 
+      <nav id="navi">
+          <div class="menu-toggler">
+            <span></span>
+          </div>
+        <div id="menu">
+          <ul>
+            <li><a href="#"><span>ホーム</span></a></li>
+            <li><a href="#schedule"><span>診察日時</span></a></li>
+            <li><a href="#access"><span>アクセス</span></a></li>
+            <li><a href="#greeting"><span>院長挨拶</span></a></li>
+            <li><a href="#explanation"><span>医院案内</span></a></li>
+          </ul>
+        </div>
+      </nav>
+      <section id="top">
+        <div class="top-text">
+          <span>一人ひとりの患者に<br>真摯に向き会うクリニック</span>
+        </div>
+      </section>
+    </div>
+  </header>
+  <main>
+    <section id="informatin">
+      <h2>お知らせ</h2>
+      <h3 class="informatin__heading">最新情報</h3>
+      <div class="informatin__inner">
+        <ul class="informatin__contents">
+          <li>2020/4/20<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/19<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/18<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/17<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/16<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/15<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/14<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/13<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/12<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+          <li>2020/4/11<span>お知らせ</span><br>コロナウイルスに関するお知らせ</li>
+        </ul>
+      </div>
+    </section>
+    <section id="schedule">
+      <h2>診療スケジュール</h2>
+      <div class="schedule__container">
+        <div class="schedule__time">
+          <h3>診察時間</h3>
+          <table >
+            <tr>
+              <th>診療時間</th>
+              <th>月</th>
+              <th>火</th>
+              <th>水</th>
+              <th>木</th>
+              <th>金</th>
+              <th>土</th>
+              <th>日</th>
+            </tr>
+            <tr>
+              <td>09:00～12:00</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>休</td>
+            </tr>
+            <tr>
+              <td>14:00～19:00</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>△</td>
+              <td>〇</td>
+              <td>〇</td>
+              <td>休</td>
+              <td>休</td>
+            </tr>
+          </table>
+          <p>△は第２・４週目は休診</p>
+          <p>受付は診療時間の30分前に終了させていただきます</p>
+        </div>
+        <div class="schedule__callender">
+          <h3>カレンダー</h3>
+          <iframe src="https://calendar.google.com/calendar/b/1/embed?height=400&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Asia%2FTokyo&amp;src=d2t1bWExOTkxQGdtYWlsLmNvbQ&amp;color=%23039BE5&amp;showTitle=0&amp;showNav=1&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style="border:solid 1px #777" width="100%" height="400" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </section>
+    <section id="access">
+      <h2>アクセス</h2>
+      <h3 class="access__heading">住所</h3>
+      <div class="access__inner">
+        <div class="access__adress">
+          <span>〒000-0000 山形県〇〇市〇〇町100</span>
+        </div>
+        <div class="access__gmap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24901.804512408344!2d139.82342469290043!3d38.72410932096896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c1a98d8e7391b%3A0x8b3bcc1b153d0639!2z6ba05bKh5biC5b255omA!5e0!3m2!1sja!2sjp!4v1587644334426!5m2!1sja!2sjp" width="100%" height="300px" frameborder="0" style="border:0;" allowfullscreen="true" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </section>  
+    <section id="greeting">
+      <h2>院長挨拶</h2>
+      <h3 class="greeting__heading">ご挨拶</h3>
+      <div class="greeting__container clearfix">
+        <div class="greeting__container__text">
+          <p>ご来院いただいた患者様が「どのような状態で、なぜこの症状が出るのか？」「どうすれば良くなるのか？」をご理解頂けるように丁寧に説明します。
+            <br>一人一人の患者様を診察する時間は長くなりお待たせするかもしれませんが、受診して良かったと思っていただけるような診療を心がけます。</p>
+        </div>
+        <div class="greeting__image"><img src="img/greeting.jpg" alt=""></div>
+      </div>
+    </section>
+    <section id="explanation">
+      <h2>当医院について</h2>
+      <div>
+        <h3 class="explanation__heading">診療内容</h3>
+        <ul class="explanation__contents">
+          <li>内科疾病全般</li>
+          <li>循環器疾患</li>
+          <li>消化器疾患</li>
+        </ul>
+      </div>
+      <div>
+        <h3>院内写真</h3>
+        <div class="gallery">
+          <div class="gallery-image">
+            <img src="img/gallery-1.jpg" alt="">
+          </div>
+          <div class="gallery-image">
+            <img src="img/gallery-2.jpg" alt="">
+          </div>
+          <div class="gallery-image">
+            <img src="img/gallery-3.jpg" alt="">
+          </div>
+          <div class="gallery-image">
+            <img src="img/gallery-4.jpg" alt="">
+          </div>
+          <div class="gallery-image">
+            <img src="img/gallery-5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="follow">
+      <ul>
+        <li class="follow__book">
+          <a href="#">
+            <span class="follow__book__text">WEB予約</span>
+            <div class="follow__book__icon">
+              <i class="fas fa-mobile-alt fa-2x"></i>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div> 
+    <div class="follow__back clearfix">
+      <ul>
+        <li class="follow__back__btn">
+          <button type="button" class="back-to-top">
+            <a href="#header"></a>
+          </button>
+        </li>
+      </ul>
+    </div> 
+  </main>
+  <footer>
+    <p>&copy; 2020 XXXクリニック All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
